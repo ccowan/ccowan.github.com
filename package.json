@@ -38,7 +38,6 @@
     "docpad-plugin-partials": "2.x",
     "docpad-plugin-stylus": "2.x",
     "docpad-plugin-text": "2.x",
-    "docpad-plugin-pygments": "~2.0.5",
     "docpad-plugin-highlightjs": "~2.1.2",
     "moment": "~2.0.0"
   },
