@@ -1,0 +1,5 @@
+<article id="post" class="post">
+	<h1 class="normal"><%= @title %></h1>
+  <h5 class="muted">Posted on <%= @date.toShortDateString() %></h5>
+	<div class="post-content"><%- @contentRenderedWithoutLayouts %></div>
+</article>

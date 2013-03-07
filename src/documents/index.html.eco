@@ -1,0 +1,11 @@
+--- yaml
+layout: 'default'
+title: 'Home'
+---
+
+<div class="row-fluid">
+  <% document = @getCollection('posts').toJSON()[0] %>
+  <div class="span12">
+    <%= @partial('post-body.html.eco', document) %>
+  </div>
+</div>
