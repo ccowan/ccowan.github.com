@@ -1,34 +1,10 @@
-a,
-a:link {
-  cursor: pointer;
-}
-footer {
-  color: #ccc;
-}
-.masthead {
-  border-bottom: 1px solid #ddd;
-}
-pre.highlighted {
-  background-color: #000;
-}
-.container-narrow {
-  max-width: 700px;
-  margin: 0 auto;
-}
-.normal {
-  font-weight: normal;
-}
-table tfoot th,
-table tbody th {
-  border-top: 1px solid #ddd;
-}
-.post-archive h3 {
-  margin-bottom: 0px;
-  font-weight: normal;
-}
-.post-archive p {
-  margin-bottom: 20px;
-}
-.post-archive .row-fluid {
-  border-bottom: 1px solid #ddd;
-}
+a,a:link{cursor:pointer}
+footer{color:#ccc}
+.masthead{border-bottom:1px solid #ddd}
+pre.highlighted{background-color:#000}
+.container-narrow{max-width:700px;margin:0 auto}
+.normal{font-weight:normal}
+table tfoot th,table tbody th{border-top:1px solid #ddd}
+.post-archive h3{margin-bottom:0;font-weight:normal}
+.post-archive p{margin-bottom:20px}
+.post-archive .row-fluid{border-bottom:1px solid #ddd}

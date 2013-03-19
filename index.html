@@ -110,47 +110,13 @@
   <footer class="footer">
   <div class="container-narrow">
     <p class="pull-right mutted">
-    This website was last updated at 2013-03-19T20:52:25.536Z
+    This website was last updated at 2013-03-19T21:06:35.454Z
     </p>
     <p class="mutted">&copy; Chris Cowan 2013</p>
   </div>
   </footer>
 
     <!-- Scripts -->
-    <script >(function(){
-	// Did we just livereload?
-var log = true && localStorage && console && console.log && true;
-if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
-	localStorage.removeItem('/docpad-livereload/reloaded');
-	console.log('LiveReloaded at', new Date())
-}
-
-// Listen for the regenerated event
-// and perform a reload of the page when the event occurs
-var listen = function(){
-	var socket = io.connect('/docpad-livereload');
-	socket.on('regenerated',function(){
-		if ( log ) {
-	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
-}
-document.location.reload();
-	});
-};
-	if ( typeof io !== 'undefined' ) {
-		listen();
-	} else {
-		// Inject socket.io into our page then listen once loaded
-var inject = function(){
-	var t = document.createElement('script');
-	t.type = 'text/javascript';
-	t.async = true;
-	t.src = '/socket.io/socket.io.js';
-	t.onload = listen;
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(t,s);
-};
-		inject();
-	}
-})();</script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 </body>
 </html>
