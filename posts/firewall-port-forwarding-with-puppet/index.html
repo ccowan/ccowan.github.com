@@ -60,7 +60,7 @@
             <article id="post" class="post">
     <h1 class="normal">Firewall Port Forwarding with Puppet</h1>
   <h5 class="muted">Posted on Mar 19 2013</h5>
-    <div class="post-content"><p>Recently, we started managing our boxes with Puppet. Part of setting that up was configuring the firewall using the Puppet Firewall module. Since we are running Node.js as an unprivileged user we needed to forward both port <code>80</code> and <code>443</code> to <code>8000</code> and <code>8443</code> respectively. I found plenty examples of setting this up with iptables but I didn&#39;t come across a Puppet example. Enjoy... :D</p>
+    <div class="post-content"><p>Recently, we started managing our boxes with Puppet. Part of setting that up was configuring the firewall using the <a href="https://github.com/puppetlabs/puppetlabs-firewall">Puppet Firewall module</a>. Since we are running Node.js as an unprivileged user we needed to forward both port <code>80</code> and <code>443</code> to <code>8000</code> and <code>8443</code> respectively. I found plenty examples of setting this up with iptables but I didn&#39;t come across a Puppet example. Enjoy... :D</p>
 <pre class="highlighted"><code class="ruby"><span class="class"><span class="keyword">class</span> <span class="title">fw::nodejs</span> {</span>
   <span class="constant">Firewall</span> {
     <span class="keyword">require</span> =&gt; <span class="keyword">undef</span>,
@@ -91,7 +91,8 @@
   }
 
 }</code></pre>
-<p>Keep in mind you will still need to setup your firewall config for persisting the firewall as outlined on the <a href="https://github.com/puppetlabs/puppetlabs-firewall">Puppet Firewall Github</a> page. Also if you want to check if it successfully work you will need to run: </p>
+<p>Keep in mind you will still need to setup your firewall config for persisting the firewall as outlined on the <a href="https://github.com/puppetlabs/puppetlabs-firewall">Puppet Firewall module</a> page. </p>
+<p>ProTip! If you want to see if the routing was setup, use the following command: </p>
 <pre class="highlighted"><code class="brainfuck"><span class="comment">sudo</span> <span class="comment">iptables</span> <span class="literal">-</span><span class="comment">t</span> <span class="comment">nat</span> <span class="literal">-</span><span class="comment">L</code></pre>
 </div>
 </article>
@@ -105,7 +106,7 @@
   <footer class="footer">
   <div class="container-narrow">
     <p class="pull-right mutted">
-    This website was last updated at 2013-03-19T21:06:35.454Z
+    This website was last updated at 2013-03-19T21:40:12.246Z
     </p>
     <p class="mutted">&copy; Chris Cowan 2013</p>
   </div>

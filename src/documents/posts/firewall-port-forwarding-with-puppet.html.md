@@ -4,7 +4,7 @@ layout: "post"
 tags: ["post","node.js","testing"]
 ---
 
-Recently, we started managing our boxes with Puppet. Part of setting that up was configuring the firewall using the Puppet Firewall module. Since we are running Node.js as an unprivileged user we needed to forward both port `80` and `443` to `8000` and `8443` respectively. I found plenty examples of setting this up with iptables but I didn't come across a Puppet example. Enjoy... :D
+Recently, we started managing our boxes with Puppet. Part of setting that up was configuring the firewall using the [Puppet Firewall module](https://github.com/puppetlabs/puppetlabs-firewall). Since we are running Node.js as an unprivileged user we needed to forward both port `80` and `443` to `8000` and `8443` respectively. I found plenty examples of setting this up with iptables but I didn't come across a Puppet example. Enjoy... :D
 
 ```ruby
 class fw::nodejs {
@@ -39,7 +39,10 @@ class fw::nodejs {
 }
 ```
 
-Keep in mind you will still need to setup your firewall config for persisting the firewall as outlined on the [Puppet Firewall Github](https://github.com/puppetlabs/puppetlabs-firewall) page. Also if you want to check if it successfully work you will need to run: 
+Keep in mind you will still need to setup your firewall config for persisting the firewall as outlined on the [Puppet Firewall module](https://github.com/puppetlabs/puppetlabs-firewall) page. 
+
+ProTip! If you want to see if the routing was setup, use the following command: 
+
 ```sh
 sudo iptables -t nat -L
 ```
