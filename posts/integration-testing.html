@@ -34,7 +34,7 @@
     <![endif]-->
 
     <!-- Styles -->
-    <link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.css" /><link  rel="stylesheet" href="/vendor/tomorrow-night-bright.css" /><link  rel="stylesheet" href="/styles/style.css" />
+    <link  rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" /><link  rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.css" /><link  rel="stylesheet" href="/vendor/tomorrow-night-bright.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
     <!-- Markup -->
@@ -50,7 +50,7 @@
           </li>
         
           <li typeof="sioc:Page" about="/pages/posts" class="">
-            <a href="/pages/posts" property="dc:title">Posts</a>
+            <a href="/pages/posts" property="dc:title">Blog</a>
           </li>
         
       </ul>
@@ -59,9 +59,38 @@
         <section id="content" class="content">
             <article id="post" class="post">
     <h1 class="normal">Integration Testing</h1>
-  <h5 class="muted">Posted on Mar 07 2013</h5>
-    <div class="post-content"><p>I finally found a sensable setup for integration testing.</p>
-<pre class="highlighted"><code class="javascript"><span class="keyword">var</span> test = require(<span class="string">'tape'</span>);</code></pre>
+  <h5 class="muted">Posted on Mar 19 2013</h5>
+    <div class="post-content"><p>I hate hate hate testing. It&#39;s not that I don&#39;t know how to write tests or that I don&#39;t want to write tests, it&#39;s just that the setups I&#39;ve used in the past have been totall cumbersome. I finally found a sensable setup for integration testing that lets me setup tests to depend on each other.</p>
+<p>Imagine your writing a set of tests where you have to create a new user, validate date that user by visiting a vaildation link (like you would find in an email). Then use that valid user to login and post a new message.</p>
+<pre class="highlighted"><code class="javascript"><span class="keyword">var</span> test = require(<span class="string">'tape'</span>);
+<span class="keyword">var</span> request = require(<span class="string">'request'</span>);
+<span class="keyword">var</span> helpers = request(<span class="string">'./helpers'</span>);
+
+<span class="keyword">var</span> run = module.exports = <span class="function"><span class="keyword">function</span> <span class="params">(callback)</span> {</span>
+  callback = callback || <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> };
+  test(<span class="string">'/api/v1/user'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(t)</span> {</span>
+    <span class="keyword">var</span> options = {
+      url: <span class="string">'http://localhost:6767/api/v1/login'</span>,
+      method: <span class="string">'POST'</span>,
+      body: {
+        login: <span class="string">'joeblow'</span>,
+        password: <span class="string">'mysecret'</span>
+      }
+      json: <span class="literal">true</span>,
+      jar: helpers.jar
+    };
+
+    require(options, <span class="function"><span class="keyword">function</span> <span class="params">(err, resp, body)</span> {</span>
+      t.equals(resp.statusCode, <span class="number">200</span>);
+      t.end();
+      callback(err, resp, body);
+    });
+  });
+};
+
+<span class="keyword">if</span> (require.main === module) {
+  run();
+}</code></pre>
 </div>
 </article>
 
@@ -74,7 +103,7 @@
   <footer class="footer">
   <div class="container-narrow">
     <p class="pull-right mutted">
-    This website was last updated at 2013-03-07T07:17:12.932Z
+    This website was last updated at 2013-03-19T20:52:25.536Z
     </p>
     <p class="mutted">&copy; Chris Cowan 2013</p>
   </div>

@@ -3,7 +3,7 @@
     <title>ChrisCowan.us</title>
     <link href="http://chriscowan.us/atom.xml" rel="self"/>
     <link href="http://chriscowan.us"/>
-    <updated>2013-03-07T07:17:12.932Z</updated>
+    <updated>2013-03-19T20:52:25.536Z</updated>
     <id>http://chriscowan.us</id>
     <author>
         <name>Chris Cowan</name>
@@ -12,10 +12,10 @@
 
     
         <entry>
-            <title>Integration Testing</title>
-            <link href="http://chriscowan.us//posts/integration-testing"/>
-            <updated>2013-03-07T07:13:45.000Z</updated>
-            <id>http://chriscowan.us//posts/integration-testing</id>
+            <title>Firewall Port Forwarding with Puppet</title>
+            <link href="http://chriscowan.us//posts/firewall-port-forwarding-with-puppet"/>
+            <updated>2013-03-19T20:51:11.000Z</updated>
+            <id>http://chriscowan.us//posts/firewall-port-forwarding-with-puppet</id>
             <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -28,7 +28,7 @@
     &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
 
     &lt;!-- Our site title and description --&gt;
-    &lt;title&gt;Integration Testing | ChrisCowan.us&lt;/title&gt;
+    &lt;title&gt;Firewall Port Forwarding with Puppet | ChrisCowan.us&lt;/title&gt;
     &lt;meta name=&quot;description&quot; content=&quot;Just a geeky 30 something dad who wants to be cool but it's hard when you drive a minivan.&quot; /&gt;
     &lt;meta name=&quot;keywords&quot; content=&quot;node.js, programming, fatherhood, web development, web, development, mountain biking, cycling, parenting&quot; /&gt;
     &lt;meta name=&quot;author&quot; content=&quot;Chris Cowan&quot; /&gt;
@@ -52,7 +52,7 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Styles --&gt;
-    &lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap-responsive.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/tomorrow-night-bright.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+    &lt;link  rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap-responsive.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/tomorrow-night-bright.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;!-- Markup --&gt;
@@ -68,7 +68,7 @@
           &lt;/li&gt;
         
           &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot; class=&quot;&quot;&gt;
-            &lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Posts&lt;/a&gt;
+            &lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Blog&lt;/a&gt;
           &lt;/li&gt;
         
       &lt;/ul&gt;
@@ -76,8 +76,8 @@
     &lt;/div&gt;
         &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
             &lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
-    &lt;h1 class=&quot;normal&quot;&gt;Integration Testing&lt;/h1&gt;
-  &lt;h5 class=&quot;muted&quot;&gt;Posted on Mar 07 2013&lt;/h5&gt;
+    &lt;h1 class=&quot;normal&quot;&gt;Firewall Port Forwarding with Puppet&lt;/h1&gt;
+  &lt;h5 class=&quot;muted&quot;&gt;Posted on Mar 19 2013&lt;/h5&gt;
     &lt;div class=&quot;post-content&quot;&gt;&lt;/div&gt;
 &lt;/article&gt;
 
@@ -90,7 +90,7 @@
   &lt;footer class=&quot;footer&quot;&gt;
   &lt;div class=&quot;container-narrow&quot;&gt;
     &lt;p class=&quot;pull-right mutted&quot;&gt;
-    This website was last updated at 2013-03-07T07:17:12.932Z
+    This website was last updated at 2013-03-19T20:52:25.536Z
     &lt;/p&gt;
     &lt;p class=&quot;mutted&quot;&gt;&amp;copy; Chris Cowan 2013&lt;/p&gt;
   &lt;/div&gt;

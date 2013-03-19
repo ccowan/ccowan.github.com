@@ -22,3 +22,13 @@ table tfoot th,
 table tbody th {
   border-top: 1px solid #ddd;
 }
+.post-archive h3 {
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+.post-archive p {
+  margin-bottom: 20px;
+}
+.post-archive .row-fluid {
+  border-bottom: 1px solid #ddd;
+}

@@ -3,9 +3,13 @@ layout: 'default'
 title: 'Home'
 ---
 
+<% for document in @getCollection('posts').toJSON()[0..5]: %>
 <div class="row-fluid">
-  <% document = @getCollection('posts').toJSON()[0] %>
   <div class="span12">
     <%= @partial('post-body.html.eco', document) %>
   </div>
+</div>
+<% end %>
+<div class="row-fluid">
+  <div class="span12"><h4><a href="/pages/posts">See Older Posts <i class="icon-arrow-right"></i></a></h4></div>
 </div>

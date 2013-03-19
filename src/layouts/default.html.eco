@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<%- @getBlock('styles').add(["/vendor/twitter-bootstrap/css/bootstrap.css","/vendor/twitter-bootstrap/css/bootstrap-responsive.css","/vendor/tomorrow-night-bright.css","/styles/style.css"]).toHTML() %>
+	<%- @getBlock('styles').add(["//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css","//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css", "/vendor/twitter-bootstrap/css/bootstrap-responsive.css","/vendor/tomorrow-night-bright.css","/styles/style.css"]).toHTML() %>
 </head>
 <body>
 	<!-- Markup -->
